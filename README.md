@@ -9,7 +9,7 @@
 
 **A whistleblower kit in your terminal.** Encrypt a folder, scrub identifying metadata, point yourself at the right regulator. One file, runs from a thumb drive.
 
-[Download portable .exe]([url](https://github.com/tonyscelentano/SecurKit/releases/tag/Release))
+[Download portable .exe]([https://github.com/tonyscelentano/SecurKit/releases/tag/Release])
 
 ## What it does
 
