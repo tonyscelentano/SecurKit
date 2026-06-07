@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SecurKit TUI — screen tour</title>
+<style>
+  :root { color-scheme: dark; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    background: #1c1c1c; color: #e0e0e0;
+    margin: 0; padding: 2rem;
+    max-width: 1200px; margin: 0 auto;
+  }
+  h1 { font-weight: 600; }
+  h2 { color: #88c0d0; margin-top: 3rem; border-bottom: 1px solid #444; padding-bottom: .3rem; }
+  .caption { color: #a0a0a0; font-size: .95em; margin-bottom: 1rem; max-width: 70ch; }
+  .screen { background: #111; padding: .5rem; border-radius: 6px; margin-bottom: 1rem; }
+  .screen object, .screen img { width: 100%; height: auto; display: block; }
+  code { background: #2a2a2a; padding: 1px 6px; border-radius: 3px; font-size: .9em; }
+  .nav { position: sticky; top: 0; background: #1c1c1c; padding: .5rem 0; border-bottom: 1px solid #333; margin-bottom: 1rem; z-index: 10; }
+  .nav a { color: #88c0d0; text-decoration: none; margin-right: 1rem; font-size: .9em; }
+  .nav a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<h1>SecurKit TUI — screen tour</h1>
+<p class="caption">SVG screenshots captured via Textual's <code>app.save_screenshot()</code>. These are pixel-faithful renders of what you'll see in a real terminal.</p>
+
+<div class="nav">
+  <a href="#welcome">1. Welcome</a>
+  <a href="#encrypt-empty">2. Encrypt (empty)</a>
+  <a href="#encrypt-suggest">3. Encrypt (after Suggest)</a>
+  <a href="#encrypt-weak">4. Encrypt (weak + mismatch)</a>
+  <a href="#decrypt">5. Decrypt</a>
+  <a href="#hotlines-list">6. Hotlines list</a>
+  <a href="#hotlines-sec">7. Hotlines SEC</a>
+  <a href="#about">8. About</a>
+</div>
+
+<h2 id="welcome">1. Welcome screen (first run)</h2>
+<p class="caption">Shown once. The "lost passphrase = lost data" warning is the most important thing on this screen — every consumer encryption tool needs to scream this.</p>
+<div class="screen"><object type="image/svg+xml" data="01-welcome.svg"></object></div>
+
+<h2 id="encrypt-empty">2. Encrypt pane (empty)</h2>
+<p class="caption">Drops here after dismissing the welcome. Plain-English instruction at the top; source folder, output bundle, passphrase fields, Suggest button.</p>
+<div class="screen"><object type="image/svg+xml" data="02-encrypt-empty.svg"></object></div>
+
+<h2 id="encrypt-suggest">3. Encrypt pane (after pressing Suggest)</h2>
+<p class="caption">Suggest fills both passphrase fields with a 7-word diceware passphrase (~56 bits). Confirm shows "✓ matches". Strength meter goes green. Feedback tells the user to write the passphrase down before continuing.</p>
+<div class="screen"><object type="image/svg+xml" data="03-encrypt-with-suggestion.svg"></object></div>
+
+<h2 id="encrypt-weak">4. Encrypt pane (weak passphrase + mismatch)</h2>
+<p class="caption">User typed "password123" and a different value into confirm. Strength meter is red, zxcvbn flags the common password, confirm field shows "✗ doesn't match" in red. But — per the "coach but don't block" stance — the Encrypt button isn't disabled.</p>
+<div class="screen"><object type="image/svg+xml" data="04-encrypt-weak-and-mismatch.svg"></object></div>
+
+<h2 id="decrypt">5. Decrypt pane</h2>
+<p class="caption">Mirror of Encrypt. Single passphrase field (no confirm — the bundle's tag is the source of truth). Helper text at the top reminds the user that nothing is written to disk if the bundle fails verification.</p>
+<div class="screen"><object type="image/svg+xml" data="05-decrypt.svg"></object></div>
+
+<h2 id="hotlines-list">6. Hotlines pane (list)</h2>
+<p class="caption">All 15 US-focused intake channels. Each entry shows name + agency. Master/detail layout — click an entry to see the details.</p>
+<div class="screen"><object type="image/svg+xml" data="06-hotlines-list.svg"></object></div>
+
+<h2 id="hotlines-sec">7. Hotlines pane (SEC selected)</h2>
+<p class="caption">Detail pane shows scope, contact channels (web/phone), retaliation protection statute, notes. This is the "portfolio differentiator" — most encryption tools stop at the bundle.</p>
+<div class="screen"><object type="image/svg+xml" data="07-hotlines-sec-selected.svg"></object></div>
+
+<h2 id="about">8. About</h2>
+<p class="caption">Version, stack summary, the "talk to a lawyer first" reminder, threat-model pointer.</p>
+<div class="screen"><object type="image/svg+xml" data="08-about.svg"></object></div>
+
+</body>
+</html>

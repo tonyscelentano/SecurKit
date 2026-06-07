@@ -9,8 +9,6 @@
 
 **A whistleblower kit in your terminal.** Encrypt a folder, scrub identifying metadata, point yourself at the right regulator. One file, runs from a thumb drive.
 
-Download portable exe: [https://github.com/tonyscelentano/SecurKit/releases/tag/Release](url)
-
 ## What it does
 
 You point SecurKit at a folder of evidence. It:
@@ -19,9 +17,6 @@ You point SecurKit at a folder of evidence. It:
 2. **Bundles and encrypts** with AES-256-GCM. Key derived via Argon2id, memory-tuned to your machine (256 MiB on a desktop, 64 MiB floor on a memory-starved laptop).
 3. **Returns a SHA-256 fingerprint** to share with the recipient over a separate channel (Signal, in person) so they can verify the bundle wasn't swapped in transit.
 4. **Points you at a regulator** — a built-in directory of 15 vetted US intake channels (SEC, CFTC, FinCEN, OSHA, DOJ, FBI, IRS Whistleblower, ICIJ SecureDrop, NYT Tips, plus the Government Accountability Project for free legal counsel).
-
-<img width="1400" height="828" alt="{FE56286F-B94F-4A47-83AD-79D933868FDA}" src="https://github.com/user-attachments/assets/14e2bb3a-df4a-406d-af80-b386dd69fa94" /> <img width="1398" height="818" alt="{D164404F-07EE-4343-AD37-2B8BC9928690}" src="https://github.com/user-attachments/assets/e3895d00-7780-4999-aedc-c57d79573340" />
-
 
 ## Quick start
 

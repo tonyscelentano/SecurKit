@@ -1,0 +1,328 @@
+# SecurKit hotlines directory — high-signal reporting channels.
+# Sources are authoritative .gov / .europa.eu / NGO portals. Verify URLs before relying.
+# `jurisdiction` is the real authority (United States / European Union / a member
+# state); the dashboard groups entries into US vs Europe regions from it.
+# Last hand-verified: US entries 2026-05-25; EU entries 2026-06-07
+
+hotlines:
+  # ──────────────────────────── United States ────────────────────────────
+  - id: sec-whistleblower
+    name: SEC Office of the Whistleblower
+    agency: Securities and Exchange Commission
+    scope: Securities fraud, insider trading, accounting fraud, FCPA, market manipulation
+    jurisdiction: United States
+    channels:
+      web: https://www.sec.gov/whistleblower
+      phone: "+1-202-551-4790"
+    notes: |
+      Award program: 10–30% of sanctions over $1M. File Form TCR through the portal.
+      Anti-retaliation under Dodd-Frank §922.
+    anonymous_ok: true
+    retaliation_protection: Dodd-Frank §922; reinstatement and double back-pay available.
+
+  - id: cftc-whistleblower
+    name: CFTC Whistleblower Office
+    agency: Commodity Futures Trading Commission
+    scope: Commodities, derivatives, swaps, spoofing, manipulation in futures markets
+    jurisdiction: United States
+    channels:
+      web: https://www.whistleblower.gov/
+      phone: "+1-202-418-5519"
+    notes: |
+      Award program parallels SEC: 10–30% of sanctions over $1M. File Form TCR.
+    anonymous_ok: true
+    retaliation_protection: Commodity Exchange Act §23.
+
+  - id: fincen-tips
+    name: FinCEN Financial Crimes Tip Line
+    agency: Financial Crimes Enforcement Network (Treasury)
+    scope: Money laundering, sanctions evasion, BSA violations, suspicious financial activity
+    jurisdiction: United States
+    channels:
+      web: https://www.fincen.gov/contact
+      email: frc@fincen.gov
+    notes: |
+      For institution-level BSA/AML concerns. Also see Treasury OIG for FinCEN itself.
+    anonymous_ok: true
+
+  - id: osha-whistleblower
+    name: OSHA Whistleblower Protection Program
+    agency: Occupational Safety and Health Administration
+    scope: Workplace safety, retaliation under 20+ federal statutes (incl. SOX, FRSA, AIR21)
+    jurisdiction: United States
+    channels:
+      web: https://www.whistleblowers.gov/
+      phone: "+1-800-321-6742"
+    notes: |
+      The actual front door for most federal anti-retaliation statutes, not just OSH Act.
+      Strict filing deadlines — some as short as 30 days from retaliation.
+    anonymous_ok: false
+    retaliation_protection: Statute-specific; reinstatement, back pay, attorney fees.
+
+  - id: doj-fcpa
+    name: DOJ Fraud Section / FCPA Unit
+    agency: Department of Justice, Criminal Division
+    scope: Foreign bribery (FCPA), corporate fraud, healthcare fraud, market integrity
+    jurisdiction: United States
+    channels:
+      web: https://www.justice.gov/criminal/criminal-fraud/report-fraud
+      email: FCPA.Fraud@usdoj.gov
+    notes: |
+      For corporate criminal conduct. Civil False Claims Act matters go through a
+      qui tam relator's counsel under 31 USC §3730, not direct DOJ submission.
+    anonymous_ok: true
+
+  - id: fbi-tips
+    name: FBI Tip Line
+    agency: Federal Bureau of Investigation
+    scope: Federal crimes, public corruption, cybercrime, civil rights violations
+    jurisdiction: United States
+    channels:
+      web: https://tips.fbi.gov/
+      phone: "+1-800-225-5324"
+    notes: |
+      General federal-crime intake. For corruption specifically, the public-integrity
+      squads accept tips via the same portal — flag "public corruption" explicitly.
+    anonymous_ok: true
+
+  - id: gao-fraudnet
+    name: GAO FraudNet
+    agency: Government Accountability Office
+    scope: Fraud, waste, abuse, and mismanagement of federal funds
+    jurisdiction: United States
+    channels:
+      web: https://www.gao.gov/about/what-gao-does/fraudnet
+      phone: "+1-800-424-5454"
+    notes: |
+      Routes to the appropriate federal Inspector General. Good front door when you
+      don't know which IG owns the program.
+    anonymous_ok: true
+
+  - id: ig-net
+    name: Council of Inspectors General (IGNet)
+    agency: CIGIE — directory of all federal OIGs
+    scope: Agency-specific waste/fraud/abuse — pick the IG matching the agency involved
+    jurisdiction: United States
+    channels:
+      web: https://www.ignet.gov/content/inspectors-general-directory
+    notes: |
+      Not a hotline itself — a directory. Every cabinet department and major agency
+      has an OIG with its own intake. Go direct when you know the agency.
+    anonymous_ok: true
+
+  - id: nlrb
+    name: NLRB Information Officer
+    agency: National Labor Relations Board
+    scope: Unfair labor practices, retaliation for protected concerted activity
+    jurisdiction: United States
+    channels:
+      web: https://www.nlrb.gov/about-nlrb/contact-us
+      phone: "+1-844-762-6572"
+    notes: |
+      Strict 6-month filing window for unfair labor practice charges.
+    anonymous_ok: false
+
+  - id: eeoc
+    name: EEOC Public Portal
+    agency: Equal Employment Opportunity Commission
+    scope: Workplace discrimination, harassment, retaliation under Title VII / ADA / ADEA
+    jurisdiction: United States
+    channels:
+      web: https://publicportal.eeoc.gov/
+      phone: "+1-800-669-4000"
+    notes: |
+      180–300 day filing window depending on state FEPA worksharing.
+    anonymous_ok: false
+
+  - id: irs-whistleblower
+    name: IRS Whistleblower Office
+    agency: Internal Revenue Service
+    scope: Tax evasion, underpayment, fraudulent returns
+    jurisdiction: United States
+    channels:
+      web: https://www.irs.gov/compliance/whistleblower-office
+    notes: |
+      File Form 211. Awards 15–30% if disputed amount exceeds $2M (or income >$200k).
+      Slow — multi-year timelines are normal.
+    anonymous_ok: false
+
+  - id: cfpb
+    name: CFPB Whistleblower Tip Line
+    agency: Consumer Financial Protection Bureau
+    scope: Consumer finance violations (lending, servicing, debt collection, deposits)
+    jurisdiction: United States
+    channels:
+      web: https://www.consumerfinance.gov/about-us/the-bureau/whistleblowers/
+      phone: "+1-855-695-7974"
+      email: whistleblower@cfpb.gov
+    notes: |
+      Distinct from the public consumer complaint portal — this is for insiders.
+    anonymous_ok: true
+
+  - id: icij-leak
+    name: ICIJ Secure Drop
+    agency: International Consortium of Investigative Journalists (NGO)
+    scope: Cross-border financial / political corruption stories (Panama Papers, etc.)
+    jurisdiction: United States
+    channels:
+      web: https://www.icij.org/leak/
+      securedrop: https://www.icij.org/leak/
+    notes: |
+      Independent journalism route. Use Tor Browser. ICIJ has demonstrated source
+      protection across multiple major leaks.
+    anonymous_ok: true
+
+  - id: nyt-tips
+    name: New York Times Tips
+    agency: The New York Times
+    scope: General investigative reporting
+    jurisdiction: United States
+    channels:
+      web: https://www.nytimes.com/tips
+      securedrop: https://www.nytimes.com/tips
+      signal: "+1-917-756-9622"
+    notes: |
+      Offers SecureDrop, Signal, and postal mail. Use only from a device that
+      isn't tied to your employer or personal accounts.
+    anonymous_ok: true
+
+  - id: gap
+    name: Government Accountability Project
+    agency: GAP (nonprofit legal advocacy)
+    scope: Pre-disclosure legal counsel for federal and corporate whistleblowers
+    jurisdiction: United States
+    channels:
+      web: https://whistleblower.org/contact/
+    notes: |
+      Talk to a lawyer BEFORE you disclose. GAP and the National Whistleblower
+      Center (whistleblowers.org) both offer free intake consultations.
+    anonymous_ok: true
+    retaliation_protection: Varies by statute — counsel will identify which protections apply.
+
+  # ──────────────── European Union (EU-wide bodies) ────────────────
+  - id: eu-olaf
+    name: OLAF — Report Fraud
+    agency: European Anti-Fraud Office (OLAF)
+    scope: Fraud, corruption, and misuse affecting the EU budget, EU funds, or EU institutions
+    jurisdiction: European Union
+    channels:
+      web: https://anti-fraud.ec.europa.eu/olaf-and-you/report-fraud_en
+      securedrop: https://fns.olaf.europa.eu/
+    notes: |
+      File via the Fraud Notification System (FNS). No formalities — report in any of
+      the 24 official EU languages. Best front door for misuse of EU money.
+    anonymous_ok: true
+
+  - id: eu-eppo
+    name: EPPO — Report a Crime
+    agency: European Public Prosecutor's Office (EPPO)
+    scope: Criminal offences against EU financial interests — fraud, corruption, money laundering, cross-border VAT fraud (PIF offences)
+    jurisdiction: European Union
+    channels:
+      web: https://www.eppo.europa.eu/en/reporting-crime-to-eppo
+    notes: |
+      The criminal-prosecution route (vs OLAF's administrative one). The online web
+      form is NOT anonymous; anonymous reporting may be possible directly with the
+      European Delegated Prosecutor in your country if national rules allow it.
+    anonymous_ok: false
+
+  - id: eu-esma
+    name: ESMA Whistleblower / Breach of Union Law
+    agency: European Securities and Markets Authority (ESMA)
+    scope: Breaches of EU securities-market law, incl. failure of a national regulator to apply Union law
+    jurisdiction: European Union
+    channels:
+      web: https://www.esma.europa.eu/interact-with-esma/whistleblowers
+      securedrop: https://www.esma.europa.eu/form/breach
+    notes: |
+      Reports may be submitted anonymously or confidentially under Art. 17a ESMA
+      Regulation. Use the Breach of Union Law form for complaints about a national
+      competent authority.
+    anonymous_ok: true
+
+  - id: eu-ecb-ssm
+    name: ECB Banking Supervision Whistleblowing
+    agency: European Central Bank — Single Supervisory Mechanism (SSM)
+    scope: Breaches of EU banking law (prudential supervision) by a supervised bank, a national supervisor, or the ECB itself
+    jurisdiction: European Union
+    channels:
+      web: https://www.bankingsupervision.europa.eu/framework/breach/html/index.en.html
+      securedrop: https://whistleblowing.bankingsupervision.europa.eu/
+    notes: |
+      Anonymous reports are accepted — strip identifying metadata from any uploaded
+      files first. Does NOT cover consumer protection or anti-money-laundering, which
+      belong to other authorities.
+    anonymous_ok: true
+
+  - id: eu-edps
+    name: EDPS — Lodge a Complaint
+    agency: European Data Protection Supervisor (EDPS)
+    scope: Data-protection violations by EU institutions and bodies (not private firms or national authorities)
+    jurisdiction: European Union
+    channels:
+      web: https://www.edps.europa.eu/data-protection/our-role-supervisor/complaints_en
+    notes: |
+      The online complaint form is mandatory; the EDPS will not act on emailed
+      complaints and the form identifies you as the data subject. For private firms or
+      national bodies, complain to your national Data Protection Authority instead.
+    anonymous_ok: false
+
+  # ──────────────── European Union (member-state regulators) ────────────────
+  - id: de-bafin
+    name: BaFin Contact Point for Whistleblowers
+    agency: Bundesanstalt für Finanzdienstleistungsaufsicht (BaFin) — Germany
+    scope: German banks, financial-services and payment institutions, insurers, asset managers, and securities trading
+    jurisdiction: Germany
+    channels:
+      web: https://www.bafin.de/EN/DieBaFin/Hinweisgeberstelle/hinweisgeberstelle_node_en.html
+    notes: |
+      Electronic system guarantees anonymity while still allowing BaFin to contact
+      you. Acknowledgement within 7 days; status update within 3 months (6 if complex).
+    anonymous_ok: true
+    retaliation_protection: Identity kept confidential; not forwarded to external bodies.
+
+  - id: fr-amf
+    name: AMF Whistleblower (Lanceur d'alerte)
+    agency: Autorité des marchés financiers (AMF) — France
+    scope: Breaches of French/EU financial-market regulation, market abuse (insider dealing, manipulation)
+    jurisdiction: France
+    channels:
+      web: https://www.amf-france.org/en/whistleblower
+    notes: |
+      Alerts may be given anonymously. The AMF can certify "informer" status for
+      market-abuse matters under Directive (EU) 2015/2392, with confidentiality for
+      the reporter and the persons named.
+    anonymous_ok: true
+    retaliation_protection: Whistleblowers shielded from civil liability where reasonable grounds existed (Law 2016-1691).
+
+  - id: nl-klokkenluiders
+    name: House for Whistleblowers (Huis voor Klokkenluiders)
+    agency: Dutch Whistleblowers Authority — Netherlands
+    scope: Work-related wrongdoing; free confidential advice plus investigation of wrongdoing and reprisals
+    jurisdiction: Netherlands
+    channels:
+      web: https://www.huisvoorklokkenluiders.nl/english
+      phone: "+31-88-133-1000"
+      email: advies@huisvoorklokkenluiders.nl
+    notes: |
+      Advice is confidential, independent, and free. Normally report internally first,
+      then to an external supervisor, before requesting an investigation here. An
+      investigation generally requires your identity, so it is not fully anonymous.
+    anonymous_ok: false
+    retaliation_protection: Dutch Whistleblower Protection Act (2023); investigates reprisals.
+
+  - id: ie-opdc
+    name: Office of the Protected Disclosures Commissioner
+    agency: OPDC (Office of the Ombudsman) — Ireland
+    scope: Workplace wrongdoing across public and private sectors; routes reports to the right prescribed person
+    jurisdiction: Ireland
+    channels:
+      web: https://www.opdc.ie/information-for-whistleblowers/
+      phone: "+353-1-639-5650"
+      email: info@opdc.ie
+    notes: |
+      You can make a protected disclosure anonymously and still be protected, but a
+      recipient may not be obliged to follow up an anonymous report. The OPDC routes
+      your report to the appropriate prescribed person rather than investigating it.
+    anonymous_ok: true
+    retaliation_protection: Protected Disclosures Act 2014 (as amended 2022).
